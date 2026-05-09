@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyMate AI</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+<body>
+ 
+<!-- Animated background orbs -->
+<div class="bg-orbs" aria-hidden="true">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+  <div class="orb orb4"></div>
+</div>
+ 
+<!-- Floating doodles -->
+<div class="doodles" aria-hidden="true">
+  <span class="dk dk1">📚</span>
+  <span class="dk dk2">✏️</span>
+  <span class="dk dk3">💡</span>
+  <span class="dk dk4">🎯</span>
+  <span class="dk dk5">🔬</span>
+  <span class="dk dk6">📐</span>
+  <span class="dk dk7">⭐</span>
+  <span class="dk dk8">🧪</span>
+</div>
+ 
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <div class="logo-box">🎓</div>
+    <div class="logo-text-wrap">
+      <h2>StudyMate <span>AI</span></h2>
+    </div>
+  </div>
+  <div class="nav-badge">
+    <span class="pulse-dot"></span>
+    Powered by Gemini
+  </div>
+</header>
+ 
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="tag">🚀 AI Powered Student Assistant</div>
+    <h1>Study Faster,<br/><span class="grad-text">Smarter</span> & Better.</h1>
+    <p>Summarize notes, generate quizzes, understand difficult concepts and plan your studies with AI.</p>
+    <div class="hero-features">
+      <div class="feature-pill">📚 Smart Notes</div>
+      <div class="feature-pill">🧠 AI Explanations</div>
+      <div class="feature-pill">🎯 Quiz Generator</div>
+    </div>
+    <a href="#features" class="hero-cta">Explore Tools <span>↓</span></a>
+  </div>
+ 
+  <div class="hero-right">
+    <div class="main-card">
+      <div class="slider">
+        <img class="slide active-slide" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"/>
+        <img class="slide" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"/>
+        <img class="slide" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop"/>
+        <img class="slide" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop"/>
+      </div>
+      <div class="slider-overlay"></div>
+      <div class="card-content">
+        <div class="card-tag">🤖 AI Study Assistant</div>
+        <h3>Helping students study smarter every day.</h3>
+      </div>
+    </div>
+    <div class="floating-card card-1">
+      <span class="fc-icon">📝</span>
+      <div><strong>Notes Simplified</strong><small>AI summarized in 2s</small></div>
+    </div>
+    <div class="floating-card card-2">
+      <span class="fc-icon">⚡</span>
+      <div><strong>Instant Quiz</strong><small>10 MCQs generated</small></div>
+    </div>
+  </div>
+</section>
+ 
+<!-- FEATURES SECTION -->
+<section class="features-section" id="features">
+  <div class="section-title">
+    <div class="section-tag">🛠️ Tools</div>
+    <h2>Everything A Student Needs 📚</h2>
+    <p>Click any tool and start learning instantly.</p>
+  </div>
+ 
+  <div class="features-grid">
+    <div class="feature-card" onclick="openTool('summarizer-tool')">
+      <div class="feature-img-wrap">
+        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop"/>
+        <div class="feature-img-overlay"></div>
+        <div class="feature-number">01</div>
+      </div>
+      <div class="feature-content">
+        <h3>📝 AI Summarizer</h3>
+        <p>Convert long notes into short summaries instantly.</p>
+        <div class="feature-arrow">Open Tool →</div>
+      </div>
+    </div>
+ 
+    <div class="feature-card" onclick="openTool('quiz-tool')">
+      <div class="feature-img-wrap">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"/>
+        <div class="feature-img-overlay"></div>
+        <div class="feature-number">02</div>
+      </div>
+      <div class="feature-content">
+        <h3>🎯 Quiz Generator</h3>
+        <p>Practice smarter with AI generated quizzes.</p>
+        <div class="feature-arrow">Open Tool →</div>
+      </div>
+    </div>
+ 
+    <div class="feature-card" onclick="openTool('explainer-tool')">
+      <div class="feature-img-wrap">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop"/>
+        <div class="feature-img-overlay"></div>
+        <div class="feature-number">03</div>
+      </div>
+      <div class="feature-content">
+        <h3>💡 Concept Explainer</h3>
+        <p>Understand difficult topics easily.</p>
+        <div class="feature-arrow">Open Tool →</div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- SUMMARIZER POPUP -->
+<section class="tool-popup" id="summarizer-tool">
+  <div class="glass-card">
+    <button class="close-btn" onclick="closeTool('summarizer-tool')">✕</button>
+    <div class="popup-header">
+      <div class="popup-icon">📝</div>
+      <div>
+        <h2>AI Note Summarizer</h2>
+        <p>Upload a PDF or paste your notes below</p>
+      </div>
+    </div>
+    <input type="file" id="pdf-upload" class="input-box file-input" accept=".pdf"/>
+    <textarea id="summarizer-input" placeholder="Paste your notes here...&#10;&#10;e.g. Chapter 3: The water cycle begins when the sun heats up water in rivers..."></textarea>
+    <div class="btn-group">
+      <button class="action-btn" onclick="runSummarizer(event)">✨ Summarize Notes</button>
+      <button class="copy-btn" onclick="copySummary()">📋 Copy</button>
+      <button class="download-btn" onclick="downloadSummaryPDF()">⬇ PDF</button>
+    </div>
+  </div>
+</section>
+ 
+<!-- QUIZ POPUP -->
+<section class="tool-popup" id="quiz-tool">
+  <div class="glass-card">
+    <button class="close-btn" onclick="closeTool('quiz-tool')">✕</button>
+    <div class="popup-header">
+      <div class="popup-icon">🎯</div>
+      <div>
+        <h2>Quiz Generator</h2>
+        <p>AI-powered MCQs tailored to your topic</p>
+      </div>
+    </div>
+    <input type="text" id="quiz-topic" class="input-box" placeholder="Enter topic e.g. Photosynthesis, French Revolution..."/>
+    <div class="input-row">
+      <select id="quiz-count" class="input-box">
+        <option value="5">5 Questions</option>
+        <option value="10">10 Questions</option>
+        <option value="15">15 Questions</option>
+      </select>
+      <select id="quiz-difficulty" class="input-box">
+        <option value="Easy">😊 Easy</option>
+        <option value="Medium">🤔 Medium</option>
+        <option value="Hard">🔥 Hard</option>
+      </select>
+    </div>
+    <button class="action-btn" onclick="runQuiz(event)">🚀 Generate Quiz</button>
+    <div class="result-box quiz-box" id="quiz-result"></div>
+  </div>
+</section>
+ 
+<!-- EXPLAINER POPUP -->
+<section class="tool-popup" id="explainer-tool">
+  <div class="glass-card">
+    <button class="close-btn" onclick="closeTool('explainer-tool')">✕</button>
+    <div class="popup-header">
+      <div class="popup-icon">💡</div>
+      <div>
+        <h2>Concept Explainer</h2>
+        <p>Any topic explained simply in your language</p>
+      </div>
+    </div>
+    <input type="text" id="explainer-input" class="input-box" placeholder="Enter difficult topic e.g. Quantum Physics..."/>
+    <select id="language-select" class="input-box">
+      <option value="English">🌐 English</option>
+      <option value="Hindi">🇮🇳 Hindi</option>
+      <option value="Bengali">🇧🇩 Bengali</option>
+      <option value="Assamese">Assamese</option>
+      <option value="Spanish">🇪🇸 Spanish</option>
+    </select>
+    <button class="action-btn" onclick="runExplainer(event)">🧠 Explain Topic</button>
+    <button class="copy-btn" onclick="copyExplanation()">📋 Copy Explanation</button>
+    <div class="result-box" id="explainer-result"></div>
+  </div>
+</section>
+ 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <div class="logo-box small">🎓</div>
+      <span>StudyMate AI</span>
+    </div>
+    <p>Made for Students with ❤️ · Built at <strong>Hack Days Guwahati 2026</strong></p>
+    <p class="footer-sub">Powered by Google Gemini API · Hack4Brahma × MLH</p>
+  </div>
+</footer>
+ 
+<div id="toast"></div>
+ 
+<script src="script.js"></script>
+</body>
+</html>
+ 
