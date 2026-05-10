@@ -1,4 +1,4 @@
-let API_KEY = "AIzaSyChCsyQt3lVczUUG6d4MR9nggO4v-UYBK0";
+let API_KEY = " ";
  
 /* ─── OPEN & CLOSE POPUPS ─────────────────── */
 function openTool(id) {
